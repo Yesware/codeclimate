@@ -191,10 +191,8 @@ rules:
     before: false
   space-before-blocks: 0
   space-before-function-paren: 0
-  space-before-keywords: 0
   space-in-parens: 0
   space-infix-ops: 0
-  space-return-throw-case: 0
   space-unary-ops: 0
   spaced-comment: 0
   wrap-regex: 0
