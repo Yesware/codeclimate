@@ -1,6 +1,7 @@
-ecmaFeatures:
-  modules: true
-  jsx: true
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
 
 env:
   amd: true
@@ -15,7 +16,9 @@ rules:
   comma-dangle: [2, never]
   no-cond-assign: 2
   no-console: 0
-  no-constant-condition: 2
+  no-constant-condition:
+  - 0
+  - checkLoops: false
   no-control-regex: 2
   no-debugger: 2
   no-dupe-args: 2
@@ -57,7 +60,6 @@ rules:
   no-case-declarations: 2
   no-div-regex: 2
   no-else-return: 0
-  no-empty-label: 2
   no-empty-pattern: 2
   no-eq-null: 2
   no-eval: 2
@@ -69,7 +71,9 @@ rules:
   no-implied-eval: 2
   no-invalid-this: 0
   no-iterator: 2
-  no-labels: 0
+  no-labels:
+  - 2
+  - allowLoop: true
   no-lone-blocks: 2
   no-loop-func: 2
   no-magic-number: 0
@@ -181,7 +185,10 @@ rules:
   semi-spacing: 0
   semi: 0
   sort-vars: 0
-  space-after-keywords: 0
+  keyword-spacing:
+  - 0
+  - after: false
+    before: false
   space-before-blocks: 0
   space-before-function-paren: 0
   space-before-keywords: 0
@@ -198,7 +205,7 @@ rules:
   arrow-spacing: 0
   constructor-super: 0
   generator-star-spacing: 0
-  no-arrow-condition: 0
+  no-confusing-arrow: 0
   no-class-assign: 0
   no-const-assign: 0
   no-dupe-class-members: 0
